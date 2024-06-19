@@ -1,4 +1,7 @@
 import React from "react";
+import { carouselData } from "@/lib/mockData";
+import Image from "next/image";
+import { Button } from "../button";
 import {
   Carousel,
   CarouselContent,
@@ -6,9 +9,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../carousel";
-import { carouselData } from "@/lib/mockData";
-import Image from "next/image";
-import { Button } from "../button";
 
 export default function HeroCarousel() {
   return (
@@ -17,13 +17,13 @@ export default function HeroCarousel() {
         {carouselData?.map((item) => (
           <CarouselItem className="" key={item?.id}>
             <div className="flex justify-between ">
-              <div className="w-6/12 flex flex-col justify-center sm:px-12">
-                <p className="sm:text-5xl text-xl font-bold leading-5">
+              <div className="sm:w-6/12 flex flex-col justify-center sm:px-12 px-4">
+                <p className="sm:text-5xl text-md font-bold leading-5">
                   {item.title}
                 </p>
                 {item?.children?.map((child) => (
                   <div key={child?.id}>
-                    <p className="sm:my-12 sm:text-3xl font-light">
+                    <p className="sm:my-12 my-4 sm:text-3xl text-xs font-light">
                       {child.desc}
                     </p>
                     <Button variant={"cyan"} size={"lg"}>
@@ -37,7 +37,7 @@ export default function HeroCarousel() {
                 alt={item.title}
                 width={650}
                 height={300}
-                className="mt-5"
+                className="mt-5 sm:w-6/12 w-64"
               />
             </div>
           </CarouselItem>

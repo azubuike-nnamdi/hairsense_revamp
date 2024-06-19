@@ -1,10 +1,10 @@
+import Footer from "@/components/common/footer";
+import Navbar from "@/components/common/navbar";
+import TanstackProvider from "@/context/tanstackProvider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import TanstackProvider from "@/context/tanstackProvider";
 import React from "react";
-import Navbar from "@/components/common/navbar";
-import Footer from "@/components/common/footer";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

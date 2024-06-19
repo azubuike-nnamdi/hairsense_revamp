@@ -1,10 +1,10 @@
 "use client";
+import { ShoppingCart, UserRound } from "lucide-react";
 import Image from "next/image";
 import React, { useState } from "react";
-import { Input } from "../ui/input";
-import { Search, ShoppingCart, UserRound } from "lucide-react";
 import CartModal from "../ui/modals/CartModal";
 import LoginModal from "../ui/modals/auth/LoginModal";
+import SearchInput from "./search";
 
 const Navbar = () => {
   const [openAuth, setOpenAuth] = useState<boolean>(false);
@@ -26,16 +26,11 @@ const Navbar = () => {
           alt="brand_logo "
           width={150}
           height={150}
+          className="sm:w-1/12 w-12"
         />
-        <div className="w-[320px] relative">
-          <Input
-            className="w-full pr-10 focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-muted-foreground"
-            placeholder="Search products..."
-          />
-          <Search className="absolute right-2 top-1/2 transform -translate-y-1/2" />
-        </div>
+        <SearchInput />
 
-        <section className="flex items-center gap-5">
+        <section className="flex items-center sm:gap-5 gap-3">
           {navLinkData.map((item) => (
             <button
               key={item.id}

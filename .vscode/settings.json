@@ -1,3 +1,30 @@
 {
-   "cSpell.words": ["clsx", "commitlint", "embla", "tailwind", "tailwindcss"]
+   "cSpell.words": ["clsx", "commitlint", "embla", "tailwind", "tailwindcss"],
+ 
+   "editor.defaultFormatter": "esbenp.prettier-vscode",
+   "editor.formatOnPaste": true,
+   "editor.formatOnSave": true,
+   "editor.inlineSuggest.showToolbar": "always",
+   "editor.quickSuggestions": {
+      "strings": true
+   },
+   "eslint.workingDirectories": [
+      {
+         "mode": "auto"
+      }
+   ],
+   "json.schemas": [
+      {
+         "url": "https://cdn.jsdelivr.net/npm/tsup/schema.json",
+         "fileMatch": ["package.json", "tsup.config.json"]
+      }
+   ],
+   "prettier.configPath": ".prettierrc.json",
+   "prettier.useEditorConfig": true,
+   "tailwindCSS.experimental.classRegex": [
+      ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+   ],
+   "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+   }
 }
