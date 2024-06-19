@@ -3,8 +3,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { Input } from "../ui/input";
 import { Search, ShoppingCart, UserRound } from "lucide-react";
-import AuthModal from "../ui/modals/AuthModal";
 import CartModal from "../ui/modals/CartModal";
+import LoginModal from "../ui/modals/auth/LoginModal";
 
 const Navbar = () => {
   const [openAuth, setOpenAuth] = useState<boolean>(false);
@@ -49,7 +49,7 @@ const Navbar = () => {
         </section>
       </nav>
 
-      {openAuth && <AuthModal onClose={() => setOpenAuth(false)} />}
+      {openAuth && <LoginModal onClose={() => setOpenAuth(false)} />}
       {openCart && <CartModal onClose={() => setOpenCart(false)} />}
     </main>
   );
