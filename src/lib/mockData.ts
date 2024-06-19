@@ -78,3 +78,30 @@ export const FooterData = [
     ],
   },
 ];
+
+export const carouselData = [
+  {
+    id: 1,
+    title: "Beautiful Cosmetics product",
+    img: "/img/hero1.png",
+    children: [
+      {
+        id: 1,
+        desc: "Your Favorite hair product is just a click away",
+        cta: "Discover now",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Find your favorite facial products",
+    img: "/img/hero2.png",
+    children: [
+      {
+        id: 1,
+        desc: "Your Favorite hair product is just a click away",
+        cta: "Discover now",
+      },
+    ],
+  },
+];
